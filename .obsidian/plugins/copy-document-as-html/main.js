@@ -207,7 +207,7 @@ var MERMAID_STYLESHEET = `
   --text-accent-hover: #7a6ae6;
   --text-normal: #2e3338;
   --background-secondary: #f2f3f5;
-  --background-secondary-alt: #e3e5e8;
+  --background-secondary-alt: #fcfcfc;
   --text-muted: #888888;
   --font-mermaid: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
   --text-error: #E4374B;
@@ -215,10 +215,14 @@ var MERMAID_STYLESHEET = `
   --background-accent: '';
   --interactive-accent: hsl( 254,  80%, calc( 68% + 2.5%));
   --background-modifier-error: #E4374B;
+  --background-primary-alt: #fafafa;
+  --background-modifier-border: #e0e0e0;
 }
 `;
-var htmlTemplate = (stylesheet, body, title) => `<html>
+var htmlTemplate = (stylesheet, body, title) => `<!DOCTYPE html>
+<html>
 <head>
+  <meta charset="utf-8">
   <title>${title}</title>
   <style>
     ${MERMAID_STYLESHEET}

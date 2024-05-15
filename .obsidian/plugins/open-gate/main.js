@@ -108,12 +108,6 @@ var createFormEditGate = (contentEl, gateOptions, onSubmit) => {
       gateOptions.userAgent = value;
     });
   });
-  new import_obsidian.Setting(advancedOptions).setName("CSS").setClass("open-gate--form-field--column").setDesc("Leave it blank if you are not sure").addTextArea((text) => {
-    var _a;
-    return text.setValue((_a = gateOptions.css) != null ? _a : "").onChange(async (value) => {
-      gateOptions.css = value;
-    });
-  });
   new import_obsidian.Setting(advancedOptions).setName("Profile Key").setClass("open-gate--form-field").setDesc("It's like profiles in Chrome, gates with the same profile can share storage").addText((text) => {
     var _a;
     return text.setValue((_a = gateOptions.profileKey) != null ? _a : "").onChange(async (value) => {
@@ -127,6 +121,23 @@ var createFormEditGate = (contentEl, gateOptions, onSubmit) => {
     var _a, _b;
     return text.setValue((_b = (_a = gateOptions.zoomFactor) == null ? void 0 : _a.toString()) != null ? _b : "0.0").onChange(async (value) => {
       gateOptions.zoomFactor = parseFloat(value);
+    });
+  });
+  const cssFieldDesc = new DocumentFragment();
+  const descLink = document.createElement("a");
+  descLink.href = "https://github.com/nguyenvanduocit/obsidian-open-gate/discussions/categories/snippets";
+  descLink.textContent = "Check out the snippet library here";
+  cssFieldDesc.appendChild(descLink);
+  new import_obsidian.Setting(advancedOptions).setName("CSS").setClass("open-gate--form-field--column").setDesc(cssFieldDesc).addTextArea((text) => {
+    var _a;
+    return text.setValue((_a = gateOptions.css) != null ? _a : "").onChange(async (value) => {
+      gateOptions.css = value;
+    });
+  });
+  new import_obsidian.Setting(advancedOptions).setName("JavaScript").setClass("open-gate--form-field--column").setDesc("Leave it blank if you are not sure").addTextArea((text) => {
+    var _a;
+    return text.setValue((_a = gateOptions.js) != null ? _a : "").onChange(async (value) => {
+      gateOptions.js = value;
     });
   });
   new import_obsidian.Setting(contentEl).addButton((btn) => btn.setButtonText(gateOptions.id ? "Update the gate" : "Create new gate").setCta().onClick(async () => {
@@ -243,6 +254,11 @@ var SettingTab = class extends import_obsidian3.PluginSettingTab {
         window.open("https://twitter.com/duocdev");
       });
     }).addButton((button) => {
+      button.setCta();
+      button.setButtonText("Bug report").onClick(() => {
+        window.open("https://aiocean.atlassian.net/servicedesk/customer/portal/4");
+      });
+    }).addButton((button) => {
       button.buttonEl.outerHTML = "<a href='https://paypal.me/duocnguyen' target='_blank'><img style='border:0px;height:35px;' src='https://cdn.ko-fi.com/cdn/kofi3.png?v=3' /></a>";
     });
   }
@@ -275,6 +291,9 @@ var createWebviewTag = (params, onReady) => {
     if (params == null ? void 0 : params.css) {
       await webviewTag.insertCSS(params.css);
     }
+    if (params == null ? void 0 : params.js) {
+      await webviewTag.executeJavaScript(params.js);
+    }
     onReady == null ? void 0 : onReady.call(null);
   });
   return webviewTag;
@@ -295,7 +314,18 @@ var createIframe = (params, onReady) => {
   iframe.setAttribute("allow", "encrypted-media; fullscreen; oversized-images; picture-in-picture; sync-xhr; geolocation");
   iframe.addClass("open-gate-iframe");
   iframe.addEventListener("load", () => {
+    var _a2, _b;
     onReady == null ? void 0 : onReady.call(null);
+    if (params == null ? void 0 : params.css) {
+      const style = document.createElement("style");
+      style.textContent = params.css;
+      (_a2 = iframe.contentDocument) == null ? void 0 : _a2.head.appendChild(style);
+    }
+    if (params == null ? void 0 : params.js) {
+      const script = document.createElement("script");
+      script.textContent = params.js;
+      (_b = iframe.contentDocument) == null ? void 0 : _b.head.appendChild(script);
+    }
   });
   return iframe;
 };
@@ -471,7 +501,7 @@ var createView = async (workspace, id, position) => {
       leaf = workspace.getLeftLeaf(false);
       break;
     case "center":
-      leaf = workspace.getLeaf(false);
+      leaf = workspace.getLeaf(true);
       break;
     case "right":
     default:
@@ -549,13 +579,20 @@ var ModalListGates = class extends import_obsidian8.Modal {
     this.gates = gates;
   }
   onOpen() {
+    var _a;
     const { contentEl } = this;
     for (const gateId in this.gates) {
       const gate = this.gates[gateId];
       const container = contentEl.createEl("div", {
         cls: "open-gate--quick-list-item"
       });
-      container.createEl(`svg`, { cls: "svg-icon" }).innerHTML = gate.icon;
+      if (!gate.icon.startsWith("<svg")) {
+        const iconSvg = (_a = (0, import_obsidian8.getIcon)(gate.icon)) != null ? _a : (0, import_obsidian8.getIcon)("link-external");
+        iconSvg.classList.add("svg-icon");
+        container.appendChild(iconSvg);
+      } else {
+        container.createEl("svg", { cls: "svg-icon" }).innerHTML = gate.icon;
+      }
       container.createEl("span", { text: gate.title });
       container.addEventListener("click", async () => {
         await openView(this.app.workspace, gate.id, gate.position);
@@ -6463,20 +6500,21 @@ function parse(src, reviver, options) {
 }
 
 // src/fns/registerCodeBlockProcessor.ts
-function processNewSyntax(sourceCode) {
-  const options = createEmptyGateOption();
-  const firstLine = sourceCode.split("\n")[0];
-  if (firstLine.startsWith("http")) {
-    options.url = firstLine;
-    sourceCode = sourceCode.replace(firstLine, "").trim();
+function processNewSyntax(plugin, sourceCode) {
+  const firstLineUrl = sourceCode.split("\n")[0];
+  if (firstLineUrl.startsWith("http")) {
+    sourceCode = sourceCode.replace(firstLineUrl, "").trim();
   }
   sourceCode = sourceCode.replace(/^\t+/gm, (match) => "  ".repeat(match.length));
   if (sourceCode.length === 0) {
     return createFrame(createEmptyGateOption(), "800px");
   }
-  let data;
+  let data = {};
+  if (firstLineUrl.startsWith("http")) {
+    data.url = firstLineUrl;
+  }
   try {
-    data = parse(sourceCode);
+    data = Object.assign(data, parse(sourceCode));
   } catch (error) {
     return createErrorMessage(error);
   }
@@ -6488,8 +6526,16 @@ function processNewSyntax(sourceCode) {
     height = typeof data.height === "number" ? `${data.height}px` : data.height;
     delete data.height;
   }
-  Object.assign(options, data);
-  return createFrame(options, height);
+  let prefill;
+  if (data.title) {
+    prefill = plugin.findGateBy("title", data.title);
+  } else if (data.url) {
+    prefill = plugin.findGateBy("url", data.url);
+  }
+  if (prefill) {
+    data = Object.assign(prefill, data);
+  }
+  return createFrame(normalizeGateOption(data), height);
 }
 function createErrorMessage(error) {
   const div = document.createElement("div");
@@ -6522,9 +6568,9 @@ function createFrame(options, height) {
   return frame;
 }
 function registerCodeBlockProcessor(plugin) {
-  plugin.registerMarkdownCodeBlockProcessor("gate", (sourceCode, el, ctx) => {
+  plugin.registerMarkdownCodeBlockProcessor("gate", (sourceCode, el, _ctx) => {
     el.addClass("open-gate-view");
-    const frame = processNewSyntax(sourceCode);
+    const frame = processNewSyntax(plugin, sourceCode);
     el.appendChild(frame);
   });
 }

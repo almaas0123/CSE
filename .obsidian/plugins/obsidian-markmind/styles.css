@@ -96,6 +96,10 @@
   border-radius: 4px;
 }
 
+.mm-node .mm-node-content img {
+   min-width:50px;
+}
+
 .mm-node.node-wireFrame .mm-node-content {
   border-radius: 6px;
   border-bottom-left-radius: 0;
@@ -132,6 +136,9 @@
 .mm-node-edit>ol,
 .mm-node-edit>ul {
   padding-left: 20px;
+}
+.mm-node-edit audio{
+min-width:300px
 }
 
 /* 笔记渲染表格 */
