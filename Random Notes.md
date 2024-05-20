@@ -8,3 +8,5 @@ Local AI can be run Locally on system inside Docker or Kubernates
 [The Local AI Playground](https://www.localai.app/)
 
 
+[Aeon Timeline | Grow big ideas into brilliant narratives](https://www.aeontimeline.com/) For Timeline Management and also for Outlines. Desktop App available on Getintopc
+

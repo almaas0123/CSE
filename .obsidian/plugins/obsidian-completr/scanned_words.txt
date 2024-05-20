@@ -10872,6 +10872,7 @@ KeG
 Kommunikation
 Kula
 Kin
+Kubernates
 ki
 ke
 kuch
@@ -24187,6 +24188,8 @@ LGBTQ
 Less
 Lays
 Learning
+Local
+Locally
 Maqsad
 Mubarak
 Moosa
@@ -72394,6 +72397,7 @@ Doesn
 Disabled
 Desai
 Diagram
+Docker
 vast
 various
 vision

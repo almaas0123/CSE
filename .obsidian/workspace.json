@@ -11,8 +11,13 @@
             "id": "da8902c3ae0eec43",
             "type": "leaf",
             "state": {
-              "type": "home-tab-view",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Random Notes.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
             }
           }
         ]
@@ -81,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "X Misc/Misc.md",
+                "file": "Random Notes.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -109,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "X Misc/Misc.md",
+                "file": "Random Notes.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -121,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "X Misc/Misc.md"
+                "file": "Random Notes.md"
               }
             }
           },
@@ -155,6 +160,8 @@
   },
   "active": "da8902c3ae0eec43",
   "lastOpenFiles": [
+    "X Misc/README.md",
+    "Home.md",
     "06 Sociology/Paper 1/09 Systems of Kinship.md",
     "06 Sociology/Paper 1/02 Sociology as Science +.md",
     "06 Sociology/Paper 1/06 Work and Economic Life +.md",
@@ -170,7 +177,6 @@
     "06 Sociology/Paper 1/08 Religion and Society.md",
     "06 Sociology/Paper 1/03 Research Methods and Analysis.md",
     "06 Sociology/Paper 1/010 Social Change in Modern Society +.md",
-    "Home.md",
     "06 Sociology/Paper 1/~$ Work and Economic Life +.docx",
     "06 Sociology/Paper 1/Contemporary Scholars.md",
     "06 Sociology/Paper 1/~WRL0002.tmp",
@@ -187,7 +193,6 @@
     "28 SITrust/SITrust Introduction.md",
     "X Misc/PDF Exporting.md",
     "28 SITrust/Elocution Competition.md",
-    "28 SITrust/40 Hadith of Shah Waliullah Dehlawi.md",
     "TM Test.canvas",
     "Untitled",
     "My Library/files/3/Test Sample.pdf",
