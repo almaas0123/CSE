@@ -3444,6 +3444,7 @@ Accounts
 Affectional
 Argdown
 Argumentation
+App
 al
 agar
 asani
@@ -5671,6 +5672,7 @@ affinal
 assigned
 acquiring
 ascribes
+available
 Husna
 Hazrat
 Hashr
@@ -16913,6 +16915,7 @@ Turkle
 Techniques
 Technique
 Tradition
+Timeline
 Points
 Pehle
 Parehsaniya
@@ -26821,6 +26824,7 @@ McIver
 Member
 Mechanism
 Modernization
+Management
 Sahih
 Surah
 Shaikh
@@ -48445,6 +48449,7 @@ Govt
 Geriatrics
 Ghurye
 Gherkin
+Getintopc
 dusre
 diya
 door
@@ -72398,6 +72403,7 @@ Disabled
 Desai
 Diagram
 Docker
+Desktop
 vast
 various
 vision

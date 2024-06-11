@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5c72f8de4115a4e7",
+        "id": "9b8cdd89fe2eabd1",
         "type": "tabs",
         "children": [
           {
-            "id": "da8902c3ae0eec43",
+            "id": "665423003b0fc168",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,8 +19,22 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "8a6e736114541944",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Almaas_Qatar.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -86,7 +100,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Random Notes.md",
+                "file": "Almaas_Qatar.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Random Notes.md",
+                "file": "Almaas_Qatar.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -126,7 +140,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Random Notes.md"
+                "file": "Almaas_Qatar.md"
               }
             }
           },
@@ -158,10 +172,13 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "da8902c3ae0eec43",
+  "active": "8a6e736114541944",
   "lastOpenFiles": [
-    "X Misc/README.md",
+    "_Index_of_CSE.md",
+    "Random Notes.md",
+    "Almaas_Qatar.md",
     "Home.md",
+    "X Misc/README.md",
     "06 Sociology/Paper 1/09 Systems of Kinship.md",
     "06 Sociology/Paper 1/02 Sociology as Science +.md",
     "06 Sociology/Paper 1/06 Work and Economic Life +.md",
@@ -190,9 +207,6 @@
     "X Misc/Fonts.md",
     "28 SITrust/2 Pager Intro.md",
     "28 SITrust/Asma al-Husna Preface.md",
-    "28 SITrust/SITrust Introduction.md",
-    "X Misc/PDF Exporting.md",
-    "28 SITrust/Elocution Competition.md",
     "TM Test.canvas",
     "Untitled",
     "My Library/files/3/Test Sample.pdf",
