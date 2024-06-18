@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "9b8cdd89fe2eabd1",
+        "id": "6ddf060a7c712506",
         "type": "tabs",
         "children": [
           {
-            "id": "665423003b0fc168",
+            "id": "5d3a34ad09188c41",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Random Notes.md",
+                "file": "Home.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -21,12 +21,25 @@
             }
           },
           {
-            "id": "8a6e736114541944",
+            "id": "4983b5b5bf1404f7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Almaas_Qatar.md",
+                "file": "Git Sample.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e0cb14cba54f9b01",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Data View.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -34,7 +47,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -63,7 +76,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Religion",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -100,7 +113,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Almaas_Qatar.md",
+                "file": "Data View.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +141,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Almaas_Qatar.md",
+                "file": "Data View.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -140,7 +153,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Almaas_Qatar.md"
+                "file": "Data View.md"
               }
             }
           },
@@ -172,12 +185,18 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "8a6e736114541944",
+  "active": "e0cb14cba54f9b01",
   "lastOpenFiles": [
+    "Git Sample.md",
+    "Data View.md",
+    "06 Sociology/Paper 1/010 Social Change in Modern Society +.md",
+    "01 GS 1/Post Independence.md",
+    "01 GS 1/Freedom Struggle.md",
+    "01 GS 1/Art Culture.md",
+    "Home.md",
+    "Almaas_Qatar.md",
     "_Index_of_CSE.md",
     "Random Notes.md",
-    "Almaas_Qatar.md",
-    "Home.md",
     "X Misc/README.md",
     "06 Sociology/Paper 1/09 Systems of Kinship.md",
     "06 Sociology/Paper 1/02 Sociology as Science +.md",
@@ -193,7 +212,6 @@
     "06 Sociology/Paper 1/Other Imp Topics.md",
     "06 Sociology/Paper 1/08 Religion and Society.md",
     "06 Sociology/Paper 1/03 Research Methods and Analysis.md",
-    "06 Sociology/Paper 1/010 Social Change in Modern Society +.md",
     "06 Sociology/Paper 1/~$ Work and Economic Life +.docx",
     "06 Sociology/Paper 1/Contemporary Scholars.md",
     "06 Sociology/Paper 1/~WRL0002.tmp",
@@ -202,11 +220,6 @@
     "06 Sociology/Paper 1/~$ Religion and Society.docx",
     "My Library/files/771/_.pdf",
     "My Library/files/769/_.pdf",
-    "Git Sample.md",
-    "05 Essay/Quotes.md",
-    "X Misc/Fonts.md",
-    "28 SITrust/2 Pager Intro.md",
-    "28 SITrust/Asma al-Husna Preface.md",
     "TM Test.canvas",
     "Untitled",
     "My Library/files/3/Test Sample.pdf",
