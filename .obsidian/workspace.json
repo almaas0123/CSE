@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6ddf060a7c712506",
+        "id": "3200de81d09a637a",
         "type": "tabs",
         "children": [
           {
-            "id": "5d3a34ad09188c41",
+            "id": "0f096b4449dc2599",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -19,35 +19,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "4983b5b5bf1404f7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Git Sample.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e0cb14cba54f9b01",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Data View.md",
-                "mode": "source",
-                "backlinks": true,
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -113,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Data View.md",
+                "file": "Home.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Data View.md",
+                "file": "Home.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": false
               }
@@ -153,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Data View.md"
+                "file": "Home.md"
               }
             }
           },
@@ -185,10 +158,10 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "e0cb14cba54f9b01",
+  "active": "0f096b4449dc2599",
   "lastOpenFiles": [
-    "Git Sample.md",
     "Data View.md",
+    "Git Sample.md",
     "06 Sociology/Paper 1/010 Social Change in Modern Society +.md",
     "01 GS 1/Post Independence.md",
     "01 GS 1/Freedom Struggle.md",
